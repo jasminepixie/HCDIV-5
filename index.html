@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Perfect Pup</title>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Banner -->
+    <section id="hero">
+        <h1>Your Perfect Pup is Just a Tail Wag Away!</h1>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="intro">
+        <h2>The Start of a Lifelong Friendship</h2>
+        <p>
+            Choosing a dog isn’t just about picking a pet—it’s about finding your soulmate in fur. It’s that wagging tail waiting for you at the door, those goofy moments that make you laugh when you’ve had a rough day, and the silent comfort of a loyal friend who’s always by your side. Dogs don’t just fill our homes; they fill our hearts.
+        </p>
+        <p>
+            But here’s the thing: not every dog is the perfect match for every person. Finding your dog—the one that fits your lifestyle, your energy, your quirks—is the start of a beautiful partnership. After all, the right dog will not only make your life better but also allow you to give them the happiest life possible.
+        </p>
+        <p>
+            The challenge? With so many breeds to choose from, each with their own unique personalities and needs, it can feel like searching for a needle in a haystack. How do you pick the one who’ll turn your life into the adventure you’ve been dreaming of?
+        </p>
+    </section>
+
+    <!-- Challenge Section -->
+    <section id="challenge">
+        <h2>The Ruff Road to Finding Your Perfect Pup</h2>
+        <p>
+            Picking the right dog breed can feel like trying to solve a puzzle with endless pieces. With an overwhelming number of breeds to choose from, conflicting advice everywhere you look, and the tricky task of balancing your personal preferences with practical needs, the process can quickly become overwhelming.
+        </p>
+        <p>
+            What makes it harder? Everyone’s life is different. Maybe you live in a cozy apartment, work from home, or have an active family with kids. Perhaps you’re dreaming of a snuggle buddy, an adventure partner, or a calm companion. Whatever your expectations, finding the breed that fits seamlessly into your life—and your heart—can be a daunting task.
+        </p>
+        <p>
+            Don’t worry—we’re here to help you find your perfect match, one paw print at a time.
+        </p>
+    </section>
+
+    <!-- Recommendation Tool Section -->
+    <section id="tool">
+        <h2>Meet Your Perfect Pup: The Dog Breed Recommendation Tool</h2>
+        <p>
+            Finding the perfect dog breed is easier than ever! Our Dog Breed Recommendation Tool provides tailored breed suggestions based on your lifestyle and preferences, making the choice stress-free and simple.
+        </p>
+        <p>
+            Here’s how it works: Simply take our quick quiz and input your preferences—whether it's intelligence, longevity, average purchase price, weekly food cost, grooming needs, suitability for children, or whether the breed is HDB approved.
+        </p>
+        <p>
+            Once you’ve shared your preferences, the tool analyzes the information and recommends the top 3 breeds that best match your needs. It’s a fun, easy, and informed way to find the breed that’s meant for you!
+        </p>
+        <button>Let’s Try It Out Now!</button>
+    </section>
+    <section id="quiz">
+        <h2>Take the Quiz to Find Your Perfect Pup</h2>
+        <form id="quizForm">
+            <label for="intelligence">Intelligence (1-10):</label>
+            <input type="range" id="intelligence" name="intelligence" min="1" max="10"><br>
+
+            <label for="longevity">Longevity (years):</label>
+            <input type="number" id="longevity" name="longevity" min="1" max="20"><br>
+
+            <label for="purchasePrice">Average Purchase Price ($):</label>
+            <input type="number" id="purchasePrice" name="purchasePrice" min="1" max="5000"><br>
+
+            <label for="foodCost">Food Cost per Year ($):</label>
+            <input type="number" id="foodCost" name="foodCost" min="1" max="5000"><br>
+
+            <label for="groomingCost">Grooming Cost ($):</label>
+            <input type="number" id="groomingCost" name="groomingCost" min="1" max="2000"><br>
+
+            <label for="children">Suitability for Children (1-10):</label>
+            <input type="range" id="children" name="children" min="1" max="10"><br>
+
+            <label for="hdbApproved">HDB Approved:</label>
+            <select id="hdbApproved" name="hdbApproved">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select><br>
+
+            <button type="submit">Get Your Recommendation</button>
+        </form>
+    </section>
+    <section id="recommendation">
+        <h2>Recommended Dog Breeds:</h2>
+        <ul id="breedList"></ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
