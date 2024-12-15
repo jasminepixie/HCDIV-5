@@ -1,46 +1,119 @@
-/* General Styles */
+/* Apply Montserrat font globally */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #f0efee;
+    color: #232e2a;
+    font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
 }
 
-/* Hero Banner */
-#hero {
-    background-color: #ffcc00;
-    text-align: center;
-    padding: 50px 0;
-    color: white;
+/* Heading styles: DynaPuff */
+h1, h2, h3 {
+    font-family: 'DynaPuff', sans-serif;
+    color: #232e2a;
 }
 
-h1 {
-    font-family: 'DynaPuff', sans-serif; /* Use DynaPuff font for headings */
-    font-size: 2.5rem;
+/* Paragraph and other text styles: Montserrat */
+p, input, select, label, button {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #232e2a;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.hero-container {
+    background-image: url('images/hero-banner.jpg'); /* Correct image path */
+    background-size: cover; /* Make the image cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    width: 100vw; /* Full width of the viewport */
+    height: 500px; /* Adjust height as needed */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Vertically center content */
+    justify-content: flex-start; /* Align content to the left */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+.hero-content {
+    padding-left: 50px; /* Adjust spacing from the left */
+    color: #ffffff; /* Set text color to white */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add contrast to the text */
+}
+
+.hero-content h1 {
+    font-family: 'DynaPuff', sans-serif; /* Use your preferred font */
+    font-size: 4rem; /* Adjust font size */
     margin: 0;
 }
 
-/* Section Styling */
-section {
-    padding: 30px;
-    margin: 20px 0;
+#intro, #challenge, #quiz {
+    border: 1px solid #d0cdc9;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Tool Section */
-#tool {
-    text-align: center;
-    background-color: #eeeeee;
-}
-
+/* Button Styling */
 button {
-    background-color: #ffcc00;
+    background-color: #48cbc1; /* Primary color */
+    color: #ffffff; /* Text color */
     border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
+    border-radius: 8px; /* Rounded edges */
+    padding: 15px 25px; /* Fat button: increased padding */
     cursor: pointer;
-    margin-top: 20px;
+    font-size: 1.2rem; /* Slightly larger text */
+    font-family: 'DynaPuff', sans-serif; /* Use DynaPuff font */
+    font-weight: 700; /* Bold font */
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth hover effect */
 }
 
+/* Button Hover Effect */
 button:hover {
-    background-color: #ff9900;
+    background-color: #3cb3a8; /* Slightly darker shade of primary color */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Input and Select Styling */
+input, select {
+    border: 1px solid #d0cdc9;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Label Styling */
+label {
+    font-weight: bold;
+}
+
+/* Breed Card Styling */
+.breed-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1em 0;
+    background-color: #fdfdfd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.breed-card h3 {
+    font-family: 'DynaPuff', sans-serif;
+    color: #ff5733;
+    margin-bottom: 0.5em;
+}
+
+.characteristics p {
+    margin: 0.3em 0;
+    font-size: 0.9em;
+    line-height: 1.2;
 }
