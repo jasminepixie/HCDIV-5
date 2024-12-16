@@ -351,10 +351,8 @@ input[type="range"] {
     align-items: center; /* Centers content vertically */
     text-align: center; /* Ensures text is centered within the footer */
     padding: 10px; /* Optional: Add padding for spacing */
-    background-color: #f0efee; /* Optional: Match your design's theme */
     width: 100%; /* Ensures the footer spans the full width */
     height: 50px; /* Optional: Set a height for the footer */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for separation */
   }
 
   #results {
@@ -364,3 +362,21 @@ input[type="range"] {
     overflow: visible; /* Allow the container to adapt to its content */
 }
 
+/* Ensure dropdowns are on their own line */
+.dropdown-container {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    max-width: 300px; /* Set a maximum width for the container */
+    width: 100%; /* Ensure it adjusts for smaller screens */
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto; /* Center the container horizontally */
+}
+  
+  select {
+    display: block;
+    width: 100%; /* Adjust the width to fit the container or customize */
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #d0cdc9;
+    border-radius: 4px;
+  }

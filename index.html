@@ -211,34 +211,32 @@
   <button type="button" onclick="nextQuestion(5)">Next</button>
 </div>
 
-          <!-- Question 6: Children -->
-          <div id="question6" class="quiz-question" style="display: none">
-            <label for="children"
-              >Do you have children in your household?</label
-            >
-            <select
-              id="children"
-              name="children"
-              oninput="updateValue('children')"
-            >
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-            <button type="button" onclick="nextQuestion(6)">Next</button>
-          </div>
-
-          <!-- Question 7: HDB Compatibility -->
-          <div id="question7" class="quiz-question" style="display: none">
-            <label for="hdb"
-              >Are you looking for a breed that is suitable for living in an HDB
-              (Housing and Development Board) apartment?</label
-            >
-            <select id="hdb" name="hdb" oninput="updateValue('hdb')">
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-            <button type="button" onclick="nextQuestion(7)">Next</button>
-          </div>
+<!-- Question 6: Children -->
+<div id="question6" class="quiz-question" style="display: none">
+    <label for="children">Do you have children in your household?</label>
+    <div class="dropdown-container">
+      <select id="children" name="children" oninput="updateValue('children')">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+    <button type="button" onclick="nextQuestion(6)">Next</button>
+  </div>
+  
+  <!-- Question 7: HDB Compatibility -->
+  <div id="question7" class="quiz-question" style="display: none">
+    <label for="hdb"
+      >Are you looking for a breed that is suitable for living in an HDB
+      (Housing and Development Board) apartment?</label
+    >
+    <div class="dropdown-container">
+      <select id="hdb" name="hdb" oninput="updateValue('hdb')">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+    <button type="button" onclick="nextQuestion(7)">Next</button>
+  </div>
 
           <!-- Submit Button -->
           <div id="submitBtnContainer" style="display: none">
@@ -250,11 +248,11 @@
 
     <!-- Results Container -->
     <section id="recommendation">
-      <div id="resultContainer" style="display: none">
-        <h2>Your Top 3 Breeds:</h2>
-        <div id="results"></div>
-      </div>
-    </section>
+        <div id="resultContainer" style="display: none">
+            <h2>Your Top 3 Breeds:</h2>
+            <div id="results"></div>
+            <button id="restartQuizButton" onclick="restartQuiz()">Recommend Again</button>
+          </div>
 
     <footer>
         <p>

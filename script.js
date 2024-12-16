@@ -63,8 +63,6 @@ function updateValue(id) {
 function submitQuiz() {
   document.getElementById("quizContainer").style.display = "none";
   document.getElementById("resultContainer").style.display = "block";
-  document.getElementById("resultContainer").style.visibility = "visible";
-document.getElementById("resultContainer").style.height = "auto";
 
   // Filter breeds based on HDB approval and other criteria
   let filteredBreeds = breedData.filter((breed) => {
@@ -176,8 +174,8 @@ function displayResults(topBreeds) {
           </div>
           <div class="characteristic">
               <label>Suitability for Children:</label>
-              <progress value="${(3 - breed["Suitability for children"]) / 2 * 100}" max="100"></progress>
-              <span>${Math.round(((3 - breed["Suitability for children"]) / 2) * 100)}%</span>
+              <progress value="${((3 - breed["Suitability for children"]) / 3) * 100}" max="100"></progress>
+              <span>${(((3 - breed["Suitability for children"]) / 3) * 100).toFixed(1)}%</span>
           </div>
           <div class="characteristic">
               <label>HDB Approved:</label>
@@ -225,4 +223,49 @@ function nextQuestion(currentQuestionNumber) {
       // If no more questions, show the submit button
       document.getElementById("submitBtnContainer").style.display = "block";
     }
+  }
+
+  function restartQuiz() {
+    // Hide the results container
+    document.getElementById("resultContainer").style.display = "none";
+  
+    // Reset the quiz form
+    const quizForm = document.getElementById("quizForm");
+    quizForm.reset();
+  
+    // Reset user answers
+    userAnswers = {
+      trainability: 5,
+      longevity: 10,
+      initialCost: 5000,
+      foodCost: 1000,
+      grooming: 2,
+      children: "yes",
+      hdb: "Yes",
+    };
+  
+    // Reset displayed slider values
+    document.getElementById("trainabilityValue").textContent = "5";
+    document.getElementById("longevityValue").textContent = "5";
+    document.getElementById("initialCostValue").textContent = "$1,000.00";
+    document.getElementById("foodCostValue").textContent = "$750.00";
+    document.getElementById("groomingValue").textContent = "Every week";
+  
+    // Show the quiz container
+    document.getElementById("quizContainer").style.display = "block";
+  
+    // Show the first question
+    const firstQuestion = document.getElementById("question1");
+    firstQuestion.style.display = "block";
+  
+    // Hide all other questions
+    const questions = document.querySelectorAll(".quiz-question");
+    questions.forEach((question, index) => {
+      if (index !== 0) {
+        question.style.display = "none";
+      }
+    });
+  
+    // Hide the submit button container
+    document.getElementById("submitBtnContainer").style.display = "none";
   }
