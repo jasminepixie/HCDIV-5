@@ -18,82 +18,92 @@
     </div>
 </section>
 
-    <!-- Introduction Section -->
-    <section id="intro">
-        <h2>The Start of a Lifelong Friendship</h2>
-        <p>
-            Choosing a dog isn’t just about picking a pet—it’s about finding your soulmate in fur. It’s that wagging tail waiting for you at the door, those goofy moments that make you laugh when you’ve had a rough day, and the silent comfort of a loyal friend who’s always by your side. Dogs don’t just fill our homes; they fill our hearts.
-        </p>
-        <p>
-            But here’s the thing: not every dog is the perfect match for every person. Finding your dog—the one that fits your lifestyle, your energy, your quirks—is the start of a beautiful partnership. After all, the right dog will not only make your life better but also allow you to give them the happiest life possible.
-        </p>
-        <p>
-            The challenge? With so many breeds to choose from, each with their own unique personalities and needs, it can feel like searching for a needle in a haystack. How do you pick the one who’ll turn your life into the adventure you’ve been dreaming of?
-        </p>
-    </section>
+<!-- Introduction Section -->
+<section id="intro">
+    <h2>The Start of a Lifelong Friendship</h2>
+    <p>
+        Choosing a dog isn’t just about picking a pet—it’s about finding your soulmate in fur. It’s that wagging tail waiting for you at the door, those goofy moments that make you laugh when you’ve had a rough day, and the silent comfort of a loyal friend who’s always by your side. Dogs don’t just fill our homes; they fill our hearts.
+    </p>
+    <p>
+        But here’s the thing: not every dog is the perfect match for every person. Finding your dog—the one that fits your lifestyle, your energy, your quirks—is the start of a beautiful partnership. After all, the right dog will not only make your life better but also allow you to give them the happiest life possible.
+    </p>
+    <p>
+        The challenge? With so many breeds to choose from, each with their own unique personalities and needs, it can feel like searching for a needle in a haystack. How do you pick the one who’ll turn your life into the adventure you’ve been dreaming of?
+    </p>
+</section>
 
-    <!-- Challenge Section -->
-    <section id="challenge">
-        <h2>The Ruff Road to Finding Your Perfect Pup</h2>
-        <p>
-            Picking the right dog breed can feel like trying to solve a puzzle with endless pieces. With an overwhelming number of breeds to choose from, conflicting advice everywhere you look, and the tricky task of balancing your personal preferences with practical needs, the process can quickly become overwhelming.
-        </p>
-        <p>
-            What makes it harder? Everyone’s life is different. Maybe you live in a cozy apartment, work from home, or have an active family with kids. Perhaps you’re dreaming of a snuggle buddy, an adventure partner, or a calm companion. Whatever your expectations, finding the breed that fits seamlessly into your life—and your heart—can be a daunting task.
-        </p>
-        <p>
-            Don’t worry—we’re here to help you find your perfect match, one paw print at a time.
-        </p>
-    </section>
+<!-- Challenge Section -->
+<section id="challenge">
+    <h2>The Ruff Road to Finding Your Perfect Pup</h2>
+    <p>
+        Picking the right dog breed can feel like trying to solve a puzzle with endless pieces. With an overwhelming number of breeds to choose from, conflicting advice everywhere you look, and the tricky task of balancing your personal preferences with practical needs, the process can quickly become overwhelming.
+    </p>
+    <p>
+        What makes it harder? Everyone’s life is different. Maybe you live in a cozy apartment, work from home, or have an active family with kids. Perhaps you’re dreaming of a snuggle buddy, an adventure partner, or a calm companion. Whatever your expectations, finding the breed that fits seamlessly into your life—and your heart—can be a daunting task.
+    </p>
+    <p>
+        Don’t worry—we’re here to help you find your perfect match, one paw print at a time.
+    </p>
+</section>
 
-    <!-- Quiz Container -->
-    <section id="quiz">
-        <h2>Meet Your Perfect Pup: The Dog Breed Recommendation Tool</h2>
-        <p>
-            Finding the perfect dog breed is easier than ever!Here’s how it works: Simply take our quick quiz and input your preferences—whether it's intelligence, longevity, average purchase price, weekly food cost, grooming needs, suitability for children, or whether the breed is HDB approved.
-        </p>
-        <p>
-            Once you’ve shared your preferences, the tool analyzes the information and recommends the top 3 breeds that best match your needs. It’s a fun, easy, and informed way to find the breed that’s meant for you!
-        </p>
+<!-- Quiz Container -->
+<section id="quiz">
+    <h2>Meet Your Perfect Pup: The Dog Breed Recommendation Tool</h2>
+    <p>
+        Finding the perfect dog breed is easier than ever! Here’s how it works: Simply take our quick quiz and input your preferences—whether it's intelligence, longevity, average purchase price, weekly food cost, grooming needs, suitability for children, or whether the breed is HDB approved.
+    </p>
+    <p>
+        Once you’ve shared your preferences, the tool analyzes the information and recommends the top 3 breeds that best match your needs. It’s a fun, easy, and informed way to find the breed that’s meant for you!
+    </p>
     <div class="form-container" id="quizContainer">
         <form id="quizForm">
             <!-- Question 1: Trainability -->
             <div id="question1" class="quiz-question">
-                <label for="trainability">How important is it for you to have a dog that is easy to train and responds quickly to commands? (1-10):</label>
-                <input type="range" id="trainability" name="trainability" min="1" max="10" value="5" oninput="updateValue('trainability')">
-                <span id="trainabilityValue">5</span>
+                <label for="trainability">What level of training difficulty are you willing to accept? (1 = easiest to train, 10 = hardest)</label>
+                <div class="slider-container">
+                    <input type="range" id="trainability" name="trainability" min="1" max="10" value="5" oninput="updateValue('trainability')">
+                    <span id="trainabilityValue">5</span>
+                </div>
                 <button type="button" onclick="nextQuestion(1)">Next</button>
             </div>
 
             <!-- Question 2: Lifespan -->
             <div id="question2" class="quiz-question" style="display:none;">
-                <label for="longevity">How much would you prefer a breed with a longer lifespan? (1-10):</label>
-                <input type="range" id="longevity" name="longevity" min="1" max="10" value="5" oninput="updateValue('longevity')">
-                <span id="longevityValue">5</span>
+                <label for="longevity">How important is a longer lifespan to you when choosing a breed? (1 = not important, 10 = very important)</label>
+                <div class="slider-container">
+                    <input type="range" id="longevity" name="longevity" min="1" max="10" value="5" oninput="updateValue('longevity')">
+                    <span id="longevityValue">5</span>
+                </div>
                 <button type="button" onclick="nextQuestion(2)">Next</button>
             </div>
 
             <!-- Question 3: Initial Cost -->
             <div id="question3" class="quiz-question" style="display:none;">
-                <label for="initialCost">How much are you willing to spend on the initial cost of acquiring a dog? (1-10000):</label>
-                <input type="range" id="initialCost" name="initialCost" min="1" max="10000" value="5000" oninput="updateValue('initialCost')">
-                <span id="initialCostValue">5000</span>
+                <label for="initialCost">How much are you willing to spend on the initial cost of acquiring a dog? (in USD):</label>
+                <div class="slider-container">
+                    <input type="range" id="initialCost" min="0" max="2000" step="100" value="1000" oninput="updateValue('initialCost')">
+                    <span id="initialCostValue">$1,000.00</span>
+                </div>
                 <button type="button" onclick="nextQuestion(3)">Next</button>
             </div>
 
-            <!-- Question 4: Annual Food Cost -->
-            <div id="question4" class="quiz-question" style="display:none;">
-                <label for="foodCost">How much are you willing to spend on dog food annually? (1-10000):</label>
-                <input type="range" id="foodCost" name="foodCost" min="1" max="10000" value="5000" oninput="updateValue('foodCost')">
-                <span id="foodCostValue">5000</span>
-                <button type="button" onclick="nextQuestion(4)">Next</button>
-            </div>
+<!-- Question 4: Annual Food Cost -->
+<div id="question4" class="quiz-question" style="display:none;">
+    <label for="foodCost">How much are you willing to spend on dog food annually? (in USD):</label>
+    <div class="slider-container">
+        <input type="range" id="foodCost" name="foodCost" min="1" max="1500" step="10" value="750" oninput="updateValue('foodCost')">
+        <span id="foodCostValue">$750.00</span>
+    </div>
+    <button type="button" onclick="nextQuestion(4)">Next</button>
+</div>
 
             <!-- Question 5: Grooming -->
             <div id="question5" class="quiz-question" style="display:none;">
                 <label for="grooming">On a scale of 1 to 3, how much grooming maintenance are you willing to accept? (1 = high, 3 = low):</label>
-                <input type="range" id="grooming" name="grooming" min="1" max="3" value="2" oninput="updateValue('grooming')">
-                <span id="groomingValue">2</span>
+                <div class="slider-container">
+                    <input type="range" id="grooming" name="grooming" min="1" max="3" value="2" oninput="updateValue('grooming')">
+                    <span id="groomingValue">2</span>
+                </div>
                 <button type="button" onclick="nextQuestion(5)">Next</button>
             </div>
 
@@ -125,21 +135,19 @@
     </div>
 </section>
 
-
-    <!-- Results Container -->
-    <section id="recommendation">
+<!-- Results Container -->
+<section id="recommendation">
     <div id="resultContainer" style="display:none;">
         <h2>Your Top 3 Breeds:</h2>
         <div id="results"></div>
     </div>
 </section>
 
+<footer>
+    <p>© 2024 Find Your Perfect Pup By Jasmine (1009651) and Camille. All Rights Reserved.</p>
+</footer>
 
-    <footer>
-        <p>© 2024 Find Your Perfect Pup. All Rights Reserved.</p>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+<!-- JavaScript -->
+<script src="script.js"></script>
 </body>
 </html>
