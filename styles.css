@@ -1,4 +1,4 @@
-/* Apply Montserrat font globally */
+/* Global Styles */
 body {
     background-color: #f0efee;
     color: #232e2a;
@@ -7,82 +7,18 @@ body {
     padding: 0;
 }
 
-/* Heading styles: DynaPuff */
+/* Heading Styles: DynaPuff */
 h1, h2, h3 {
     font-family: 'DynaPuff', sans-serif;
     color: #232e2a;
 }
 
-/* Paragraph and other text styles: Montserrat */
+/* Text and Input Styles */
 p, input, select, label, button {
     font-family: 'Montserrat', Arial, sans-serif;
     color: #232e2a;
 }
 
-/* Section Styles */
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-}
-
-.hero-container {
-    background-image: url('images/hero-banner.jpg'); /* Correct image path */
-    background-size: cover; /* Make the image cover the entire container */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent tiling */
-    width: 100vw; /* Full width of the viewport */
-    height: 500px; /* Adjust height as needed */
-    display: flex; /* Flexbox for alignment */
-    align-items: center; /* Vertically center content */
-    justify-content: flex-start; /* Align content to the left */
-    margin: 0; /* Remove margin */
-    padding: 0; /* Remove padding */
-}
-
-.hero-content {
-    padding-left: 50px; /* Adjust spacing from the left */
-    color: #ffffff; /* Set text color to white */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add contrast to the text */
-}
-
-.hero-content h1 {
-    font-family: 'DynaPuff', sans-serif; /* Use your preferred font */
-    font-size: 4rem; /* Adjust font size */
-    margin: 0;
-}
-
-#intro, #challenge, #quiz {
-    border: 1px solid #d0cdc9;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Button Styling */
-button {
-    background-color: #48cbc1; /* Primary color */
-    color: #ffffff; /* Text color */
-    border: none;
-    border-radius: 8px; /* Rounded edges */
-    padding: 15px 25px; /* Fat button: increased padding */
-    cursor: pointer;
-    font-size: 1.2rem; /* Slightly larger text */
-    font-family: 'DynaPuff', sans-serif; /* Use DynaPuff font */
-    font-weight: 700; /* Bold font */
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: all 0.3s ease; /* Smooth hover effect */
-}
-
-/* Button Hover Effect */
-button:hover {
-    background-color: #3cb3a8; /* Slightly darker shade of primary color */
-    transform: translateY(-2px); /* Lift effect */
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-}
-
-/* Input and Select Styling */
 input, select {
     border: 1px solid #d0cdc9;
     border-radius: 4px;
@@ -91,76 +27,340 @@ input, select {
     font-size: 1rem;
 }
 
-/* Label Styling */
 label {
     font-weight: bold;
 }
 
-/* Breed Card Styling */
-.breed-card {
-    border: 1px solid #ddd;
+/* Button Styles */
+button {
+    display: block; /* Ensure the button is on its own line */
+    margin: 0 auto; /* Center align the button */
+    padding: 10px 20px; /* Adjust button padding */
+    background-color: #48cbc1; /* Match your design's theme */
+    color: white; /* Make text color white */
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 1rem; /* Adjust font size */
+    font-family: 'DynaPuff', sans-serif; /* Ensure consistency with your fonts */
+    cursor: pointer; /* Show pointer on hover */
+    margin-top: 32px
+}
+
+button:hover {
+    background-color: #3cb3a8; /* Slightly darker shade for hover effect */
+    transform: translateY(-2px); /* Add a hover effect to lift the button */
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+/* Updated Section Styles */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px; /* Increase the maximum width */
+    width: 90%; /* Span most of the viewport width */
+    background-color: #ffffff;
+    border: 1px solid #d0cdc9;
     border-radius: 8px;
-    padding: 1em;
-    margin: 1em 0;
-    background-color: #fdfdfd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    background-image: url('./images/hero-banner.jpg'); /* Set the background image */
+    background-size: cover; /* Make sure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 100px 0; /* Increase the vertical padding to make the section taller */
+    min-height: 400px; /* Ensure a minimum height for the container */
+    color: white; /* Ensure text is readable */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow to the text for contrast */
+    margin-bottom: 40px; /* Add space below the hero section */
+}
+
+/* Quiz and Results Container */
+#quizContainer, #resultContainer {
+    max-width: 90%; /* Expand width of quiz and results containers */
+    margin: 0 auto; /* Center align the containers */
+    padding: 0px;
+}
+
+.hero-content {
+    padding-left: 100px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: left; /* Align the text to the left */
+    width: 35%; /* Restrict content to half the screen */
+    margin: 0; /* Remove any extra margin */
+    padding-top: 25px;
+}
+
+.hero-content h1 {
+    font-family: 'DynaPuff', sans-serif;
+    font-size: 4.7rem;
+    margin: 0;
+    line-height: 1.2; /* Adjust the value to control line spacing */
+}
+
+/* Quiz Section */
+#quizContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.quiz-question {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-container, .button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center align the button horizontally */
+    margin-top: 20px; /* Add space above the button */
+}
+
+/* Results Section */
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Breed Card Styles */
+.breed-card {
+    width: 300px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f0efee; /* Updated background color */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .breed-card h3 {
     font-family: 'DynaPuff', sans-serif;
-    color: #ff5733;
+    color: #82472c
+
+    ;
     margin-bottom: 0.5em;
 }
+
+.breed-image {
+    width: 300px; /* Set a consistent width */
+    height: 200px; /* Set a consistent height */
+    object-fit: cover; /* Ensure the image scales to fit the dimensions without distortion */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    margin-bottom: 0px; /* Add some space below the image */
+  }
 
 .characteristics p {
     margin: 0.3em 0;
     font-size: 0.9em;
     line-height: 1.2;
+    text-align: right; /* Align text to the right */
 }
 
-.quiz-question {
-    margin-bottom: 20px;
-}
-
-.slider-container {
+.characteristic {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 0;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align to the left */
+    margin-bottom: 24px; /* Adjust the value to increase or decrease spacing */
 }
 
+.characteristic label {
+    margin-bottom: 0px; /* Add space below the label */
+    font-weight: bold; /* Emphasize the label */
+}
+
+.characteristic progress {
+    width: 100%; /* Ensure the bar spans the container */
+}
+
+.characteristic span {
+    font-size: 0.9em; /* Slightly smaller font for percentages */
+    color: #555; /* Subtle color for the value */
+}
+
+.characteristic:last-child {
+    margin-bottom: 0; /* Remove margin for the last characteristic to keep it tidy */
+}
+
+/* General styling for the slider */
 input[type="range"] {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 10px;
-    background: #fec0c5;
+    -webkit-appearance: none; /* Removes default browser styling */
+    width: 100%; /* Ensures the slider stretches across its container */
+    height: 16px; /* Maintains consistent height */
+    margin: 12px 0;
+    background: #F5A0A7; /* Track color */
+    border-radius: 12px; /* Rounded edges */
+    outline: none; /* Removes the focus outline */
+  }
+  
+  /* Style for the track in webkit browsers (Chrome, Safari) */
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 16px; /* Keeps height consistent */
+    background: #F5A0A7; /* Pink color for the track */
     border-radius: 5px;
-    outline: none;
-    margin: 5px 0;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #ff6f91;
+    border: none;
+  }
+  
+  /* Style for the thumb in webkit browsers */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Removes default styling */
+    width: 16px; /* Thumb size */
+    height: 16px;
+    background: #ffffff; /* White thumb */
+    border: 2px solid #F5A0A7; /* Matches the track color */
+    border-radius: 50%; /* Circular thumb */
+    cursor: pointer;
+  }
+  
+  /* Style for the track in Firefox */
+  input[type="range"]::-moz-range-track {
+    height: 8px;
+    background: #F5A0A7;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  /* Style for the thumb in Firefox */
+  input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border: 2px solid #F5A0A7;
     border-radius: 50%;
     cursor: pointer;
-}
-
-input[type="range"]::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #ff6f91;
+  }
+  
+  /* Style for the track in Edge/IE */
+  input[type="range"]::-ms-track {
+    width: 100%;
+    height: 8px;
+    background: transparent; /* Removes default track */
+    border-color: transparent;
+    color: transparent;
+  }
+  
+  input[type="range"]::-ms-fill-lower {
+    background: #F5A0A7;
+    border-radius: 5px;
+  }
+  
+  input[type="range"]::-ms-fill-upper {
+    background: #F5A0A7;
+    border-radius: 5px;
+  }
+  
+  /* Style for the thumb in Edge/IE */
+  input[type="range"]::-ms-thumb {
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border: 2px solid #F5A0A7;
     border-radius: 50%;
     cursor: pointer;
+  }
+
+  .characteristic progress {
+    width: 100%; /* Ensure the bar spans the container */
+    appearance: none; /* Reset default styling */
 }
 
-#initialCostValue {
-    margin-top: 5px;
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
+.characteristic progress::-webkit-progress-bar {
+    background-color: #c8efec; /* Background color of the bar (optional) */
+    border-radius: 100px; /* Rounded edges */
+}
+
+.characteristic progress::-webkit-progress-value {
+    background-color: #48cbc1; /* The filled portion of the bar */
+    border-radius: 100px; /* Rounded edges for the filled area */
+}
+
+.characteristic progress::-moz-progress-bar {
+    background-color: #48cbc1; /* The filled portion of the bar in Firefox */
+    border-radius: 100px;
+}
+
+/* Intro container styles */
+.intro-container {
+  display: flex; /* Use flexbox to align content side by side */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Add space between the text and image */
+  gap: 20px; /* Add space between text and image */
+  max-width: 1200px; /* Limit the overall width */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Text styling */
+.intro-text {
+  flex: 1; /* Allow the text to take up available space */
+}
+
+/* Image styling */
+/* Image styling */
+.intro-image {
+    flex: 1; /* Allow the image to take up available space */
+    width: auto; /* Let the width adjust naturally */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 500px; /* Set a maximum width for the image */
+    max-height: 400px; /* Set a maximum height for the image */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    object-fit: cover; /* Ensure the image covers its container proportionally */
+  }
+
+  /* Challenge Section Styling */
+.challenge-container {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    gap: 20px; /* Space between the image and text */
+    margin: 40px auto; /* Add some margin for spacing */
+    max-width: 1200px; /* Limit the width of the section */
+    width: 90%; /* Make the section responsive */
+  }
+  
+  .challenge-image {
+    flex: 1; /* Allow the image to take 1 part of the available space */
+    max-width: 500px; /* Set a maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  }
+  
+  .challenge-text {
+    flex: 2; /* Allow the text to take 2 parts of the available space */
+  }
+
+  footer {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center; /* Ensures text is centered within the footer */
+    padding: 10px; /* Optional: Add padding for spacing */
+    background-color: #f0efee; /* Optional: Match your design's theme */
+    width: 100%; /* Ensures the footer spans the full width */
+    height: 50px; /* Optional: Set a height for the footer */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for separation */
+  }
+
+  #results {
+    padding: 0; /* Reset padding */
+    margin: 0 auto; /* Center the container */
+    max-height: none; /* Ensure it doesn't add height restrictions */
+    overflow: visible; /* Allow the container to adapt to its content */
 }
 
