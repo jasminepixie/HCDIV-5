@@ -185,7 +185,7 @@ function displayResults(topBreeds) {
           <div class="characteristic">
               <label>Food Costs:</label>
               <progress value="${(breed["Food Costs"] / 2000) * 100}" max="100"></progress>
-              <span>${formatter.format(breed["Food Costs"])}</span>
+              <span>${formatter.format(breed["Food Costs"])} per year</span>
           </div>
           <div class="characteristic">
               <label>Grooming Needs:</label>
