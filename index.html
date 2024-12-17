@@ -109,7 +109,7 @@
           <!-- Question 1: Trainability -->
           <div id="question1" class="quiz-question">
             <label for="trainability"
-              >What level of training difficulty are you willing to accept? (1 =
+              >What level of training difficulty are you willing to accept? (0 =
               easiest to train, 10 = hardest)</label
             >
             <div class="slider-container">
@@ -117,7 +117,7 @@
                 type="range"
                 id="trainability"
                 name="trainability"
-                min="1"
+                min="0"
                 max="10"
                 value="5"
                 oninput="updateValue('trainability')"
@@ -131,14 +131,14 @@
           <div id="question2" class="quiz-question" style="display: none">
             <label for="longevity"
               >How important is a longer lifespan to you when choosing a breed?
-              (1 = not important, 10 = very important)</label
+              (0 = not important, 10 = very important)</label
             >
             <div class="slider-container">
               <input
                 type="range"
                 id="longevity"
                 name="longevity"
-                min="1"
+                min="0"
                 max="10"
                 value="5"
                 oninput="updateValue('longevity')"
@@ -180,9 +180,9 @@
                 type="range"
                 id="foodCost"
                 name="foodCost"
-                min="1"
+                min="0"
                 max="1500"
-                step="10"
+                step="50"
                 value="750"
                 oninput="updateValue('foodCost')"
               />

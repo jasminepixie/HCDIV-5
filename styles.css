@@ -110,7 +110,7 @@ section {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 80%;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -173,20 +173,9 @@ section {
     text-align: right; /* Align text to the right */
 }
 
-.characteristic {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align to the left */
-    margin-bottom: 24px; /* Adjust the value to increase or decrease spacing */
-}
-
 .characteristic label {
     margin-bottom: 0px; /* Add space below the label */
     font-weight: bold; /* Emphasize the label */
-}
-
-.characteristic progress {
-    width: 100%; /* Ensure the bar spans the container */
 }
 
 .characteristic span {
@@ -197,6 +186,35 @@ section {
 .characteristic:last-child {
     margin-bottom: 0; /* Remove margin for the last characteristic to keep it tidy */
 }
+
+.characteristic {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align to the left */
+  margin-bottom: 24px; /* Adjust spacing */
+  width: 100%; /* Ensure the bars span the container */
+}
+
+.characteristic progress {
+  width: 100%; /* Ensure the progress bars span the container */
+  appearance: none; /* Reset default styling */
+}
+
+.characteristic progress::-webkit-progress-bar {
+  background-color: #c8efec; /* Background color of the bar (optional) */
+  border-radius: 100px; /* Rounded edges */
+}
+
+.characteristic progress::-webkit-progress-value {
+  background-color: #48cbc1; /* The filled portion of the bar */
+  border-radius: 100px; /* Rounded edges for the filled area */
+}
+
+.characteristic progress::-moz-progress-bar {
+  background-color: #48cbc1; /* The filled portion of the bar in Firefox */
+  border-radius: 100px;
+}
+
 
 /* General styling for the slider */
 input[type="range"] {
@@ -380,3 +398,45 @@ input[type="range"] {
     border: 1px solid #d0cdc9;
     border-radius: 4px;
   }
+  .slider-container input[type="range"] {
+    -webkit-appearance: none; /* Removes default browser styling */
+    width: 100%; /* Ensure the slider stretches across its container */
+    height: 16px; /* Maintain consistent height */
+    margin: 12px 0;
+    background: #F5A0A7; /* Track color */
+    border-radius: 12px; /* Rounded edges */
+    outline: none; /* Removes the focus outline */
+}
+
+.slider-container input[type="range"]::-webkit-slider-runnable-track {
+    height: 16px; /* Keeps height consistent */
+    background: #F5A0A7; /* Pink color for the track */
+    border-radius: 5px;
+    border: none;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Removes default styling */
+    width: 16px; /* Thumb size */
+    height: 16px;
+    background: #ffffff; /* White thumb */
+    border: 2px solid #F5A0A7; /* Matches the track color */
+    border-radius: 50%; /* Circular thumb */
+    cursor: pointer;
+}
+
+.slider-container input[type="range"]::-moz-range-track {
+    height: 8px;
+    background: #F5A0A7;
+    border-radius: 5px;
+    border: none;
+}
+
+.slider-container input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border: 2px solid #F5A0A7;
+    border-radius: 50%;
+    cursor: pointer;
+}

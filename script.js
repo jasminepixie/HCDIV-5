@@ -13,7 +13,7 @@ fetch("./breedData.json")
 let userAnswers = {
   trainability: 5,
   longevity: 10,
-  initialCost: 5000,
+  initialCost: 1000,
   foodCost: 1000,
   grooming: 2,
   children: "yes", // Matching the "yes"/"no" format in the data
@@ -78,11 +78,11 @@ function submitQuiz() {
     // Training difficulty preference (inverted)
     const adjustedObedience = 100 - breed.Obedience;
     const userTrainabilityMapped =
-      100 - (userAnswers.trainability - 1) * (100 / 9);
+      100 - (userAnswers.trainability*10);
     score += Math.abs(adjustedObedience - userTrainabilityMapped);
 
     // Longevity preference mapping
-    const userLongevityMapped = (userAnswers.longevity - 1) * (20 / 9);
+    const userLongevityMapped = (userAnswers.longevity) * (20 / 10);
     score += Math.abs(breed.Longevity - userLongevityMapped);
 
     // Purchase price preference
@@ -124,6 +124,25 @@ function displayResults(topBreeds) {
       2: "Every week",
       3: "Every day",
     };
+    
+    // Invert the suitability scale so higher values reflect higher suitability
+    function invertSuitability(suitability) {
+      return 4 - suitability; // 1 -> 3, 2 -> 2, 3 -> 1
+    }
+
+    // Map the original suitability values to descriptive labels
+    function getSuitabilityLabel(suitability) {
+      switch (suitability) {
+        case 1:
+          return "High suitability";
+        case 2:
+          return "Medium suitability";
+        case 3:
+          return "Low suitability";
+        default:
+          return "Unknown";
+      }
+    }
 
     topBreeds.forEach((breed) => {
         const breedElement = document.createElement("div");
@@ -160,6 +179,7 @@ function displayResults(topBreeds) {
           </div>
           <div class="characteristic">
               <label>Purchase Price:</label>
+              <progress value="${(breed["Purchase Price"] / 2700) * 100}" max="100"></progress>
               <span>${formatter.format(breed["Purchase Price"])}</span>
           </div>
           <div class="characteristic">
@@ -174,8 +194,8 @@ function displayResults(topBreeds) {
           </div>
           <div class="characteristic">
               <label>Suitability for Children:</label>
-              <progress value="${((3 - breed["Suitability for children"]) / 3) * 100}" max="100"></progress>
-              <span>${(((3 - breed["Suitability for children"]) / 3) * 100).toFixed(1)}%</span>
+              <progress value="${invertSuitability(breed["Suitability for children"])}" max="3"></progress>
+              <span>${getSuitabilityLabel(breed["Suitability for children"])}</span>
           </div>
           <div class="characteristic">
               <label>HDB Approved:</label>
@@ -237,7 +257,7 @@ function nextQuestion(currentQuestionNumber) {
     userAnswers = {
       trainability: 5,
       longevity: 10,
-      initialCost: 5000,
+      initialCost: 1000,
       foodCost: 1000,
       grooming: 2,
       children: "yes",
